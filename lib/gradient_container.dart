@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 const startAlignment = Alignment.topLeft;
 const endAlignment = Alignment.bottomRight;
@@ -8,7 +9,6 @@ class GradientContainer extends StatelessWidget {
   final List<Color> colors;
 
   void startQuiz() {
-    print('bang bang bang');
   }
 
   @override
@@ -35,10 +35,10 @@ class GradientContainer extends StatelessWidget {
             const SizedBox(
               height: 20,
             ),
-            const Text(
+            Text(
               "Learn Flutter the fun way",
-              style: TextStyle(
-                color: Color.fromARGB(255, 237, 239, 235),
+              style: GoogleFonts.poppins(
+                color: const Color.fromARGB(255, 237, 239, 235),
                 fontWeight: FontWeight.w600,
                 fontSize: 24,
               ),

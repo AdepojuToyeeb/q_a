@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class StartScreen extends StatelessWidget {
-  const StartScreen({super.key});
+  const StartScreen(this.switchScreen, {super.key});
+
+  final void Function() switchScreen;
   void startQuiz() {
-    print('bang bang bang');
+    switchScreen();
   }
 
   @override
@@ -29,14 +32,16 @@ class StartScreen extends StatelessWidget {
           //   ),
           // ),
           const SizedBox(height: 50),
-          const Text(
+          Text(
             "Welcome to our Quiz App!",
-            style: TextStyle(
-              color: Color.fromARGB(255, 237, 223, 252),
+            style: GoogleFonts.openSans(
+              color: const Color.fromARGB(255, 237, 223, 252),
               fontSize: 24,
             ),
           ),
-          const SizedBox(height: 30),
+          const SizedBox(
+            height: 30,
+          ),
           OutlinedButton.icon(
             onPressed: startQuiz,
             style: OutlinedButton.styleFrom(
